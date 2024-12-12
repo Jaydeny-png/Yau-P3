@@ -68,5 +68,50 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
-      }
+      },
+      [
+            {
+              "title": "Cars",
+              "iscore": 7.1,
+              "rating": "G",
+              "runtime": 117,
+              "released": [2006, 6, 9],
+              "country": "USA",
+              "posters": ["img/cars1.jpg"],
+              "imdb": "https://www.imdb.com/title/tt0317219/",
+              "website": "https://www.pixar.com/feature-films/cars",
+              "likes": 150000,
+              "dislikes": 12000,
+              "posterindex": 0
+            },
+            {
+              "title": "Cars 2",
+              "iscore": 6.2,
+              "rating": "G",
+              "runtime": 106,
+              "released": [2011, 6, 24],
+              "country": "USA",
+              "posters": ["img/cars2.jpg"],
+              "imdb": "https://www.imdb.com/title/tt1216475/",
+              "website": "https://www.pixar.com/feature-films/cars-2",
+              "likes": 110000,
+              "dislikes": 18000,
+              "posterindex": 0
+            },
+            {
+              "title": "Cars 3",
+              "iscore": 6.7,
+              "rating": "G",
+              "runtime": 102,
+              "released": [2017, 6, 16],
+              "country": "USA",
+              "posters": ["img/cars3.jpg"],
+              "imdb": "https://www.imdb.com/title/tt3606756/",
+              "website": "https://www.pixar.com/feature-films/cars-3",
+              "likes": 95000,
+              "dislikes": 15000,
+              "posterindex": 0
+            }
+          ]
+          
 ]
