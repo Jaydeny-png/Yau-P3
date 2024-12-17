@@ -36,21 +36,22 @@
 
 	      <div class="row">
 
-			<div class="col-md-6">
+			 <div v-for="(movies, index) in movies" class="col-md-6">
 	            <div class="thumbnail">
 
-						<img class="poster img-fluid" />
-						<div class="imageInfo">%posterindex%</div>
+						<img class="poster img-fluid" v-on:click="movies.posterindex++" 
+						:src="movies.posters[getPosterIndex(movies.posterindex, movies.posters) - 1]"  />
+						<div class="imageInfo">Poster {{ getPosterIndex(movies.posterindex, movies.posters) }} of {{ movies.posters.length }}</div>
 
-						<p class="title">%title% (%country%)</p>
-						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> %iscore% </p>
-						<p class="runtime">Runtime: %runtime%</p>
-						<p class="released">Released: %released% | Rated: %rating%</p>
-						<p class="websites">Websites: <a> imdb </a> | <a>website</a></p>
+						<p class="title">{{movies.title}} ({{movies.country}})</p>
+						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{movies.iscore}} </p>
+						<p class="runtime">Runtime: {{timeText(movies.runtime)}}</p>
+						<p class="released">Released: {{getMonthText(movies.released)}} | Rated: {{movies.rating}}</p>
+						<p class="websites">Websites: <a :href="movies.imdb" target="_blank"> imdb </a> | <a :href="movies.website" target="_blank">website</a></p>
 
 			            <div class="social">
-			              <p class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> %likes%</p>
-			              <p class="dislikes"><i class="bi bi-hand-thumbs-down"></i> %dislikes%</p>
+			              <p class="likes" v-on:click="movies.likes++"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{movies.likes}}</p>
+			              <p class="dislikes" v-on:click="movies.dislikes++"><i class="bi bi-hand-thumbs-down"></i> {{movies.dislikes}}</p>
 			            </div>
 	            </div>
 	        </div>
